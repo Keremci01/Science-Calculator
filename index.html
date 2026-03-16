@@ -9,25 +9,13 @@
 
 <style>
 body{
-font-family: Arial;
-margin:0;
-overflow:hidden;
-}
-
-#panel{
-position:absolute;
-top:10px;
-left:10px;
-background:white;
-padding:10px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-z-index:10;
+font-family:Arial;
+margin:20px;
 }
 
 #plot{
-width:100vw;
-height:100vh;
+width:100%;
+height:500px;
 }
 </style>
 
@@ -35,11 +23,10 @@ height:100vh;
 
 <body>
 
-<div id="panel">
-<h3>Fonksiyon Yaz</h3>
-<input id="func" value="x^2">
+<h2>Fonksiyon Yaz</h2>
+
+<input id="func" placeholder="x^2">
 <button onclick="draw()">Grafiği Çiz</button>
-</div>
 
 <div id="plot"></div>
 
@@ -51,6 +38,8 @@ var f = document.getElementById("func").value;
 
 functionPlot({
 target:'#plot',
+width:800,
+height:500,
 grid:true,
 data:[{
 fn:f
@@ -58,4 +47,9 @@ fn:f
 });
 
 }
+
+</script>
+
+</body>
+</html>
 ```
