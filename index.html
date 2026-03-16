@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Function Calculator</title>
 
 <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=desmos"></script>
 
 <style>
-html, body{
+body{
   margin:0;
-  padding:0;
-  height:100%;
-  overflow:hidden;
+  font-family:Arial;
+}
+
+#topbar{
+  padding:10px;
 }
 
 #calculator{
   width:100%;
-  height:100vh;
-}
-
-#panel{
-  position:absolute;
-  top:10px;
-  left:10px;
-  background:white;
-  padding:10px;
-  border-radius:8px;
-  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  height:calc(100vh - 60px);
 }
 </style>
 
@@ -33,8 +26,10 @@ html, body{
 
 <body>
 
-<div id="panel">
+<div id="topbar">
+<h2>Fonksiyon Yaz</h2>
 <input id="func" placeholder="x^2">
+<button onclick="draw()">Grafiği Çiz</button>
 </div>
 
 <div id="calculator"></div>
@@ -44,16 +39,16 @@ html, body{
 var elt = document.getElementById("calculator");
 var calculator = Desmos.GraphingCalculator(elt);
 
-document.getElementById("func").addEventListener("input", function(){
+function draw(){
 
-  var f = this.value;
+  var f = document.getElementById("func").value;
 
   calculator.setExpression({
     id:"graph1",
-    latex:`y=${f}`
+    latex:"y="+f
   });
 
-});
+}
 
 </script>
 
