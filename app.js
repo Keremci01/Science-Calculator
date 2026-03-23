@@ -18,27 +18,16 @@ const chart = new Chart(ctx, {
         scales: {
             x: {
                 type: 'linear',
-                position: 'bottom',
                 min: 0,
                 max: 60,
-                ticks: {
-                    stepSize: 10
-                },
-                title: {
-                    display: true,
-                    text: 'Zaman (s)'
-                }
+                ticks: { stepSize: 10 },
+                title: { display: true, text: 'Zaman (s)' }
             },
             y: {
                 min: 0,
                 max: 100,
-                ticks: {
-                    stepSize: 10
-                },
-                title: {
-                    display: true,
-                    text: 'Sürat (m/s)'
-                }
+                ticks: { stepSize: 10 },
+                title: { display: true, text: 'Sürat (m/s)' }
             }
         }
     }
@@ -51,9 +40,7 @@ function addData() {
     if (isNaN(time) || isNaN(speed)) return
 
     dataPoints.push({ x: time, y: speed })
-
     dataPoints.sort((a, b) => a.x - b.x)
-
     chart.update()
 
     document.getElementById('time').value = ''
@@ -63,4 +50,16 @@ function addData() {
 function clearData() {
     dataPoints.length = 0
     chart.update()
+}
+
+function toggleMenu() {
+    document.getElementById('sidebar').classList.toggle('active')
+}
+
+function toggleGroup(id) {
+    document.getElementById(id).classList.toggle('active')
+}
+
+function showPage(page) {
+    document.getElementById('sidebar').classList.remove('active')
 }
