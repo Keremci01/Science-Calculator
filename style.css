@@ -73,3 +73,71 @@ canvas {
     border-radius: 10px;
     padding: 10px;
 }
+
+.sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+    padding: 20px;
+    color: white;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.menu-btn {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background: #e2e8f0;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-group {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.submenu.active {
+    max-height: 200px;
+}
+
+.menu-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.main {
+    margin-left: 0;
+    transition: 0.3s;
+}
