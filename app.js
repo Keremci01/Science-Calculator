@@ -45,7 +45,7 @@ const chart = new Chart(ctx, {
                 }
             },
             zoom: {
-                pan: { enabled: true, mode: 'xy' },
+                pan: { enabled: true, mode: 'xy', modifierKey: null },
                 zoom: {
                     wheel: { enabled: true },
                     pinch: { enabled: true },
