@@ -86,6 +86,20 @@ function updateChartType() {
     chart.update()
 }
 
+function updateTitle() {
+    if (currentType === "surat") {
+        document.getElementById("title").innerText = "Sürat - Zaman Grafiği"
+    }
+
+    if (currentType === "konum") {
+        document.getElementById("title").innerText = "Konum - Zaman Grafiği"
+    }
+
+    if (currentType === "ivme") {
+        document.getElementById("title").innerText = "İvme - Zaman Grafiği"
+    }
+}
+
 function addData() {
     const time = parseFloat(document.getElementById('time').value)
     const speed = parseFloat(document.getElementById('speed').value)
@@ -119,5 +133,6 @@ function toggleGroup(id) {
 function showPage(page) {
     currentType = page
     updateChartType()
+    updateTitle()
     document.getElementById('sidebar').classList.remove('active')
 }
