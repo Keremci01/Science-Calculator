@@ -61,5 +61,21 @@ function toggleGroup(id) {
 }
 
 function showPage(page) {
+    document.getElementById('suratPage').style.display = 'none'
+    document.getElementById('konumPage').style.display = 'none'
+    document.getElementById('ivmePage').style.display = 'none'
+
+    if (page === 'surat') {
+        document.getElementById('suratPage').style.display = 'block'
+    }
+
+    if (page === 'konum') {
+        document.getElementById('konumPage').style.display = 'block'
+    }
+
+    if (page === 'ivme') {
+        document.getElementById('ivmePage').style.display = 'block'
+    }
+
     document.getElementById('sidebar').classList.remove('active')
 }
