@@ -91,14 +91,12 @@ canvas {
     left: 0;
 }
 
-/* 🔥 MENÜ YAZISI FIX */
 .sidebar h2 {
     margin-top: 80px;
     margin-bottom: 20px;
     font-size: 22px;
 }
 
-/* 🔥 HAMBURGER UPGRADE */
 .menu-btn {
     position: fixed;
     left: 15px;
@@ -123,7 +121,6 @@ canvas {
     transform: scale(1.05);
 }
 
-/* 🔥 MENÜ GRUP HOVER */
 .menu-group {
     background: rgba(255,255,255,0.05);
     padding: 14px;
@@ -139,13 +136,11 @@ canvas {
     transform: translateX(5px);
 }
 
-/* 🔥 OK DÖNME ANİMASYONU */
 .menu-group.active {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: white;
 }
 
-/* 🔥 SUBMENU ANİMASYON */
 .submenu {
     max-height: 0;
     overflow: hidden;
@@ -156,7 +151,6 @@ canvas {
     max-height: 200px;
 }
 
-/* 🔥 MENU ITEM */
 .menu-item {
     padding: 10px;
     margin: 5px 0;
@@ -171,7 +165,6 @@ canvas {
     color: white;
 }
 
-/* 🔥 AKTİF SAYFA */
 .menu-item.active {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: white;
