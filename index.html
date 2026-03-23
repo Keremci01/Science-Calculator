@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sürat Zaman Grafiği</title>
+<title>Grafikler</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -19,8 +19,8 @@
     </div>
     <div class="submenu" id="g1">
         <div class="menu-item" onclick="showPage('surat')">Sürat - Zaman</div>
-        <div class="menu-item">Konum - Zaman</div>
-        <div class="menu-item">İvme - Zaman</div>
+        <div class="menu-item" onclick="showPage('konum')">Konum - Zaman</div>
+        <div class="menu-item" onclick="showPage('ivme')">İvme - Zaman</div>
     </div>
 
     <div class="menu-group" onclick="toggleGroup('g2')">
@@ -35,6 +35,7 @@
 
 <div class="main" id="main">
 
+    <!-- SÜRAT -->
     <div id="suratPage">
         <div class="container">
             <h1>Sürat - Zaman Grafiği</h1>
@@ -47,6 +48,22 @@
             </div>
 
             <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <!-- KONUM -->
+    <div id="konumPage" style="display:none;">
+        <div class="container">
+            <h1>Konum - Zaman Grafiği</h1>
+            <p>Buraya konum grafiği gelecek</p>
+        </div>
+    </div>
+
+    <!-- İVME -->
+    <div id="ivmePage" style="display:none;">
+        <div class="container">
+            <h1>İvme - Zaman Grafiği</h1>
+            <p>Buraya ivme grafiği gelecek</p>
         </div>
     </div>
 
